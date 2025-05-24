@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê tài chính</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Thêm Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Thêm Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Thống kê tài chính</h1>
+        <div class="input-section">
+            <label>Tháng:</label>
+            <input type="number" id="month" min="1" max="12" value="5">
+            <label>Tổng thu:</label>
+            <input type="number" id="tongThu" value="0">
+            <label>Tổng chi:</label>
+            <input type="number" id="tongChi" value="0">
+            <button onclick="saveData()">Lưu dữ liệu</button>
+        </div>
+        <canvas id="financeChart" width="400" height="200"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
